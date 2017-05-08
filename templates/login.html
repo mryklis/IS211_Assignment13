@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Professor Login</title>
+  </head>
+
+  <body>
+		<div id='login'>
+		{% if error %}<p class="error"><strong>Error:</strong>{{ error }}{% endif %}
+		<form action="/login" method="post">
+		<p>
+			<label for="username">Username</label>
+			<input type="text" name="username"></input></p>
+		<p>
+			<label for="password">Password</label>
+			<input type="text" name="password"></input></p>
+		<input type="submit" value="Login"></input>
+		</form>
+		</div>
+  </body>
+</html>

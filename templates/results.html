@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>
+Quiz Results
+</title>
+</head>
+<body>
+<table name="results" border = "1">
+<tr>
+<th colspan="3" style="text-align: center"><strong>Quiz Results for {{ studentname }}</strong></th>
+</tr>
+<tr>
+<th>Quiz ID</th><th>Score</th>
+</tr>
+{% for result in results %}
+<tr><td>{{result.quiz_id}}</td><td>{{result.score|safe}}</td></tr>
+{% else %}
+<tr><strong>No Quiz Results</strong></tr>
+{% endfor %}
+</table>
+<div><a href="/dashboard">Back to Dashboard</a></div>
+</body>
+</html>

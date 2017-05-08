@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Quiz</title>
+  </head>
+
+  <body>
+    {% for message in get_flashed_messages() %}
+      <div class=flash>{{ message }}</div>
+  	{% endfor %}
+		<div id='/quiz/add'>
+		{% if error %}<p class="error"><strong>Error:</strong>{{ error }}{% endif %}
+		<form action="/quiz/add" method="post">
+		<p>
+			<label for="Subject">Subject</label>
+			<input type="text" name="subject"></input></p>
+		<p>
+			<label for="Question Count">Question Count</label>
+			<input type="text" name="count"></input></p>
+			<p>
+			<label for="Question Date">Question Date</label>
+			<input type="text" name="date"></input></p>
+		<input type="submit" value="Add Quiz"></input>
+		</form>
+		</div>
+  </body>
+</html>

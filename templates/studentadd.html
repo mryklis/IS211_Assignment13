@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Student</title>
+  </head>
+
+  <body>
+    {% for message in get_flashed_messages() %}
+      <div class=flash>{{ message }}</div>
+  	{% endfor %}
+		<div id='/student/add'>
+		{% if error %}<p class="error"><strong>Error:</strong>{{ error }}{% endif %}
+		<form action="/student/add" method="post">
+		<p>
+			<label for="First Name">First Name</label>
+			<input type="text" name="first_name"></input></p>
+		<p>
+			<label for="Last Name">Last Name</label>
+			<input type="text" name="last_name"></input></p>
+		<input type="submit" value="Add Student"></input>
+		</form>
+		</div>
+  </body>
+</html>
